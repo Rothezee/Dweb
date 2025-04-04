@@ -1,0 +1,39 @@
+/*
+Ejercicio 3 Defina la clase celeste_centrada de manera tal que todos los elementos que
+pertenezcan a ella cumplan las siguientes características
+- Letra color celeste
+- Encabezados centrados
+- Imágenes y tablas centradas
+- Enlace de color bordo, sin subrayar
+- Tipo de letra verdana
+- Tamaño de letra 12 para párrafos
+- Cuando el mouse pasa sobre un enlace este debe cambiar de color
+*/
+
+.celeste_centrada {
+    color: aqua;
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+    img {
+        display: block;
+        margin: auto;
+    }
+    table {
+        display: flex;
+        justify-content: center;
+    }
+    a {
+        color: rgb(68, 2, 2);
+        text-decoration: none;
+    }
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    p {
+        font-size: 12;
+    }
+
+    a:hover {
+        color: rgb(98, 231, 140);
+    }
+}
