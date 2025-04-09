@@ -1,0 +1,64 @@
+
+body {
+    display: flex;
+    padding: 2%;
+    background-color: silver;
+}
+
+header {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 14%;
+    background-color: rgb(74, 77, 79);
+    box-shadow: 0.03em 0.03em 1em rgb(97, 96, 96);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+
+main {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 31%;
+    right: 0;
+    bottom: auto;
+    background-color: rgb(74, 77, 79);
+    flex-direction: column;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0.03em 0.03em 1em rgb(97, 96, 96);
+}
+
+aside {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    bottom: 0;
+    width: 28%;
+    background-color: rgb(74, 77, 79);
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 0.03em 0.03em 1em rgb(97, 96, 96);
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 5%;
+    background-color: black;
+    color: white;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
