@@ -1,0 +1,24 @@
+body {
+    display: flex;
+}
+.cajita {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    left: 0;
+    transition: all 0s ease;
+    transform: translateX(0);
+}
+
+.cajita:hover {
+    background-color: #2a9210;
+    border-color: #999;
+    transition: all 3s ease;
+    transform: translateX(1920px);
+}
