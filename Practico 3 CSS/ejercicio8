@@ -1,0 +1,37 @@
+a) ¿Qué elementos de HTML son generalmente modificados en las CSS?
+Las hojas de estilo en cascada (CSS) permiten modificar la presentación de muchos elementos HTML. Algunos de los más comunes son:
+
+body
+Se modifica su color de fondo, márgenes, padding y fuente general de toda la página.
+
+h1, h2, h3, etc. (encabezados)
+Se personaliza el tamaño de letra, color, márgenes y alineación.
+
+p (párrafos)
+Se ajusta el interlineado, el color del texto, el tamaño de fuente y el espaciado.
+
+a (enlaces)
+Se estilizan los colores en sus distintos estados: normal, visitado, hover, etc.
+
+div
+Usado como contenedor general. Se le dan dimensiones, bordes, fondos, posicionamiento y más.
+
+table, th, td
+Se les modifica el borde, espaciado, color, alineación, tamaño de texto, etc.
+
+Otros ejemplos comunes: ul, li, form, input, button, nav, footer, section, etc.
+
+b) Describa a grandes rasgos cómo es la organización de las CSS
+Las CSS están organizadas mediante reglas de estilo, y cada regla se compone de:
+
+Selector
+Indica a qué elemento(s) de HTML se aplica la regla (por ejemplo: body, .clase, #id, p, etc.).
+
+Declaraciones
+Van entre llaves {} e incluyen propiedades y valores que definen el estilo.
+
+Propiedades
+Son las características que queremos cambiar, como color, background-color, font-size, etc.
+
+Valores
+Especifican cómo se va a modificar esa propiedad, como blue, 16px, center, etc.
