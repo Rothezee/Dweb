@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    grid-template-areas: 
+        "click dbclick mover"
+        "mout cmenu mdown"
+        "mup menter wheel";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10%;
+}
+
+#click {
+    grid-area: click;
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+#dbclick {
+    grid-area: dbclick;
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+}
+
+#cmenu {
+    grid-area: cmenu;
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+    cursor: not-allowed;
+}
+
+#mdown {
+    grid-area: mdown;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    text-align: center;
+}
+
+#mover {
+    grid-area: mover;
+    background-color: lightpink;
+    padding: 20px;
+    text-align: center;
+}
+
+#mup {
+    grid-area: mup;
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}
+
+#menter {
+    grid-area: menter;
+    background-color: lightcyan;
+    padding: 20px;
+    text-align: center;
+}
+
+#wheel {
+    grid-area: wheel;
+    background-color: lightyellow;
+    padding: 20px;
+    text-align: center;
+}
+
+#mout {
+    grid-area: mout;
+    background-color: lightseagreen;
+    padding: 20px;
+    text-align: center;
+}
