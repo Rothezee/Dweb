@@ -1,3 +1,12 @@
+/*Ejercicio 10: Defina una función que permita cargar un arreglo de objetos Persona y luego mostrar
+los datos de una persona según:
+a) por dni
+b) por apellido
+c) por rango de peso
+d) por rango de altura
+*/
+
+// Definición de la clase Persona
 class Persona {
     constructor(nombre, apellido, dni, fechaNacimiento, altura, peso) {
         this.nombre = nombre;
@@ -39,6 +48,7 @@ function FiltrarDNI(personas, dni) {
 
 document.querySelector("form").addEventListener("submit", function (e) {
     e.preventDefault(); // Evitar el envío del formulario
+    alert("Formulario enviado"); // Mostrar alerta al enviar el formulario
     // Obtener los valores de los campos del formulario
     let nuevapersona = new Persona(
         document.getElementById("nombre").value,
@@ -48,6 +58,17 @@ document.querySelector("form").addEventListener("submit", function (e) {
         document.getElementById("altura").value,
         document.getElementById("peso").value
     );
+    personas.push(nuevapersona); // Agregar la nueva persona al array
+    console.log("Persona agregada:", nuevapersona.verDatos()); // Mostrar la nueva persona en la consola
+    document.getElementById("nombre").value = ""; // Limpiar el campo de nombre
+    document.getElementById("apellido").value = ""; // Limpiar el campo de apellido
+    document.getElementById("dni").value = ""; // Limpiar el campo de dni
+    document.getElementById("fechaNacimiento").value = ""; // Limpiar el campo de fecha de nacimiento
+    document.getElementById("altura").value = ""; // Limpiar el campo de altura
+    document.getElementById("peso").value = ""; // Limpiar el campo de peso
+
 });
+
+
 
 
