@@ -7,6 +7,8 @@ d) por rango de altura
 */
 
 // Definición de la clase Persona
+
+let filtrar;
 class Persona {
     constructor(nombre, apellido, dni, fechaNacimiento, altura, peso) {
         this.nombre = nombre;
@@ -50,7 +52,6 @@ if (datosGuardados) {
     console.log("Personas cargadas desde localStorage:", personas);
 }
 
-
 function FiltrarDNI(personas, dni) {
     return personas.filter(persona => persona.dni === dni);
 }
@@ -86,14 +87,14 @@ document.querySelector("#contactoForm").addEventListener("submit", function (e) 
         JSON.stringify(persona);
     }); // Convertir cada objeto persona a JSON
 
-    console.log("Personas en el arreglo:", personas); // Mostrar el arreglo de personas en la consola
-    console.log("Persona agregada:", nuevapersona.verDatos()); // Mostrar la nueva persona en la consola
-    document.getElementById("nombre").value = ""; // Limpiar el campo de nombre
-    document.getElementById("apellido").value = ""; // Limpiar el campo de apellido
-    document.getElementById("dni").value = ""; // Limpiar el campo de dni
-    document.getElementById("fechaNacimiento").value = ""; // Limpiar el campo de fecha de nacimiento
-    document.getElementById("altura").value = ""; // Limpiar el campo de altura
-    document.getElementById("peso").value = ""; // Limpiar el campo de peso
+    console.log("Personas en el arreglo:", personas); 
+    console.log("Persona agregada:", nuevapersona.verDatos()); 
+    document.getElementById("nombre").value = ""; 
+    document.getElementById("apellido").value = "";
+    document.getElementById("dni").value = "";
+    document.getElementById("fechaNacimiento").value = "";
+    document.getElementById("altura").value = ""; 
+    document.getElementById("peso").value = ""; 
 
 });
 
@@ -101,13 +102,9 @@ const fdni = getElementById("fdni");
 
 fdni.addEventListener("submit", function (e) {
     e.preventDefault(); // Evitar el envío del formulario
-    const dni = document.getElementById("dni").value;
-    const resultado = FiltrarDNI(personas, dni);
-    if (resultado.length > 0) {
-        console.log("Persona encontrada por DNI:", resultado[0].verDatos());
-    } else {
-        console.log("No se encontró ninguna persona con ese DNI.");
-    }
+    filtrar = fdni.textContent;
+    personas.FiltrarDNI(personas, filtrar);
+    console.log("Filtrar por DNI:", filtrar);
 });
 
 
