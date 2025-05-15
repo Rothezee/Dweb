@@ -90,6 +90,29 @@ ul {
     font-size: 20px;
 }
 
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+th {
+    background-color: #2e3a59;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: solid 1px #ccc;
+}
+
 .filtro {
     display: flex;
     flex-direction: row;

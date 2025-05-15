@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Streaming - Contacto</title>
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,13 +22,12 @@
         <section>
             <center><h1>Filtrar por</h1></center>
             <div class="filtro">
-                <div class="elemento">DNI</div>
-                <div class="elemento">Apellido</div>
-                <div class="elemento">Rango de peso</div>
-                <div class="elemento">Rango de altura</div>
+                <form action="submit">
+                    <input type="text" id="fdni" placeholder="DNI" onkeyup="filtrarDNI()">
+                </form>
             </div>
-        </section>
-        <table>
+            <br>
+            <table>
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -42,6 +42,8 @@
                 <!-- Cargar personas con DOM -->    
             </tbody>
         </table>
+        </section>
+
         </main>
     <footer>
         <p>Contacto: contacto@streaming.com</p>
