@@ -52,6 +52,7 @@ if (datosGuardados) {
     console.log("Personas cargadas desde localStorage:", personas);
 }
 
+
 function FiltrarDNI(personas, dni) {
     return personas.filter(persona => persona.dni === dni);
 }
@@ -87,23 +88,24 @@ document.querySelector("#contactoForm").addEventListener("submit", function (e) 
         JSON.stringify(persona);
     }); // Convertir cada objeto persona a JSON
 
-    console.log("Personas en el arreglo:", personas); 
-    console.log("Persona agregada:", nuevapersona.verDatos()); 
-    document.getElementById("nombre").value = ""; 
-    document.getElementById("apellido").value = "";
-    document.getElementById("dni").value = "";
-    document.getElementById("fechaNacimiento").value = "";
-    document.getElementById("altura").value = ""; 
-    document.getElementById("peso").value = ""; 
+    console.log("Personas en el arreglo:", personas); // Mostrar el arreglo de personas en la consola
+    console.log("Persona agregada:", nuevapersona.verDatos()); // Mostrar la nueva persona en la consola
+    document.getElementById("nombre").value = ""; // Limpiar el campo de nombre
+    document.getElementById("apellido").value = ""; // Limpiar el campo de apellido
+    document.getElementById("dni").value = ""; // Limpiar el campo de dni
+    document.getElementById("fechaNacimiento").value = ""; // Limpiar el campo de fecha de nacimiento
+    document.getElementById("altura").value = ""; // Limpiar el campo de altura
+    document.getElementById("peso").value = ""; // Limpiar el campo de peso
 
 });
 
 const fdni = getElementById("fdni");
+const botondni = getElementById("filtrardni");
 
-fdni.addEventListener("submit", function (e) {
-    e.preventDefault(); // Evitar el envío del formulario
-    filtrar = fdni.textContent;
-    personas.FiltrarDNI(personas, filtrar);
+botondni.addEventListener("click", function () {
+    console.log("tu vieja");
+    filtrar = fdni.value;
+    FiltrarDNI(personas, filtrar);
     console.log("Filtrar por DNI:", filtrar);
 });
 
