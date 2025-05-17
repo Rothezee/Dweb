@@ -52,30 +52,6 @@ if (datosGuardados) {
     console.log("Personas cargadas desde localStorage:", personas);
 }
 
-
-function filtrarDNI() {
-    const input = document.getElementById("fdni");
-    const dni = input.value.trim();
-    let filtrados = personas;
-    if(dni) {
-        filtrados = personas.filter(p => p.dni.includes(dni));
-    }
-    //mostrarPersonasEnTabla(filtrados);
-}
-
-function FiltrarApellido(personas, apellido) {
-    return personas.filter(p => p.apellido === apellido);
-}
-
-function FiltrarPeso(personas, min, max) {
-    return personas.filter(p => p.peso >= min && p.peso <= max);
-}
-
-function FiltrarAltura(personas, min, max) {
-    return personas.filter(p => p.altura >= min && p.altura <= max);
-}
-
-
 document.querySelector("#contactoForm").addEventListener("submit", function (e) {
     e.preventDefault(); // Evitar el envío del formulario
     alert("Formulario enviado"); // Mostrar alerta al enviar el formulario
@@ -94,28 +70,13 @@ document.querySelector("#contactoForm").addEventListener("submit", function (e) 
         JSON.stringify(persona);
     }); // Convertir cada objeto persona a JSON
 
-    console.log("Personas en el arreglo:", personas); // Mostrar el arreglo de personas en la consola
-    console.log("Persona agregada:", nuevapersona.verDatos()); // Mostrar la nueva persona en la consola
-    document.getElementById("nombre").value = ""; // Limpiar el campo de nombre
-    document.getElementById("apellido").value = ""; // Limpiar el campo de apellido
-    document.getElementById("dni").value = ""; // Limpiar el campo de dni
-    document.getElementById("fechaNacimiento").value = ""; // Limpiar el campo de fecha de nacimiento
-    document.getElementById("altura").value = ""; // Limpiar el campo de altura
-    document.getElementById("peso").value = ""; // Limpiar el campo de peso
+    console.log("Personas en el arreglo:", personas);
+    console.log("Persona agregada:", nuevapersona.verDatos()); 
+    document.getElementById("nombre").value = "";
+    document.getElementById("apellido").value = ""; 
+    document.getElementById("dni").value = ""; 
+    document.getElementById("fechaNacimiento").value = ""; 
+    document.getElementById("altura").value = ""; 
+    document.getElementById("peso").value = ""; 
 
 });
-
-const fdni = document.getElementById("fdni");
-const botondni = document.getElementById("filtrardni");
-
-botondni.addEventListener("click", function () {
-    console.log("tu vieja");
-    filtrar = fdni.value;
-    F
-    filtrarDNI(personas, filtrar);
-    console.log("Filtrar por DNI:", filtrar);
-});
-
-
-
-
