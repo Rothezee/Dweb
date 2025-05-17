@@ -53,8 +53,14 @@ if (datosGuardados) {
 }
 
 
-function FiltrarDNI(personas, dni) {
-    return personas.filter(persona => persona.dni === dni);
+function filtrarDNI() {
+    const input = document.getElementById("fdni");
+    const dni = input.value.trim();
+    let filtrados = personas;
+    if(dni) {
+        filtrados = personas.filter(p => p.dni.includes(dni));
+    }
+    //mostrarPersonasEnTabla(filtrados);
 }
 
 function FiltrarApellido(personas, apellido) {
@@ -99,13 +105,14 @@ document.querySelector("#contactoForm").addEventListener("submit", function (e) 
 
 });
 
-const fdni = getElementById("fdni");
-const botondni = getElementById("filtrardni");
+const fdni = document.getElementById("fdni");
+const botondni = document.getElementById("filtrardni");
 
 botondni.addEventListener("click", function () {
     console.log("tu vieja");
     filtrar = fdni.value;
-    FiltrarDNI(personas, filtrar);
+    F
+    filtrarDNI(personas, filtrar);
     console.log("Filtrar por DNI:", filtrar);
 });
 
