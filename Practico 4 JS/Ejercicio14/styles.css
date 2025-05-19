@@ -91,15 +91,31 @@ ul {
 }
 
 table {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border-collapse: collapse;
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed; /* Fuerza que todas las columnas midan lo mismo */
+}
+
+tbody {
+  display: block;
+  max-height: 200px;  /* Ajustá según lo que necesites */
+  overflow-y: auto;
+  width: 100%;
+}
+
+thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
 }
 
 tr {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -108,6 +124,12 @@ tr {
 th {
     background-color: #2e3a59;
     color: white;
+    padding: 10px;
+    text-align: left;
+    border: solid 1px #ccc;
+}
+
+td {
     padding: 10px;
     text-align: left;
     border: solid 1px #ccc;

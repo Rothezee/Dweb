@@ -52,57 +52,24 @@ if (datosGuardados) {
     console.log("Personas cargadas desde localStorage:", personas);
 }
 
-function FiltrarDNI(personas, dni) {
-    return personas.filter(p => p.dni === dni);
-}
-
-function FiltrarApellido(personas, apellido) {
-    return personas.filter(p => p.apellido === apellido);
-}
-
-function FiltrarPeso(personas, peso) {
-    return personas.filter(p => p.peso === peso);
-}
-
-function FiltrarAltura(personas, altura) {
-    return personas.filter(p => p.altura === altura);
-}
-
-const fdni = document.getElementById("fdni");
-const botondni = document.getElementById("filtrardni");
-
-botondni.addEventListener("click", function () {
-    console.log("tu vieja");
-    filtrar = fdni.value;
-    let resultado = FiltrarDNI(personas, filtrar);
-    console.log("Filtrar por DNI:", filtrar);
-    console.log("Filtrar por DNI:", resultado);
+addEventListener("DOMContentLoaded", () => {
+    cargarPersonas();
 });
 
-const apellido = document.getElementById("apellido");
-const botonapellido = document.getElementById("filtrarapellido");
+function cargarPersonas() {
+    const tbody = document.querySelector("tbody");
+    tbody.innerHTML = ""; // Limpiar tabla existente
 
-botonapellido.addEventListener("click", function () {
-    filtrar = apellido.value;
-    let resultado = FiltrarApellido(personas, filtrar);
-    console.log("Filtrar por Apellido:", filtrar);
-    console.log("Filtrar por Apellido:", resultado);
-});
-
-const peso = document.getElementById("peso");
-const botonpeso = document.getElementById("filtrarpeso");
-botonpeso.addEventListener("click", function () {
-    filtrar = peso.value;
-    let resultado = FiltrarPeso(personas, filtrar);
-    console.log("Filtrar por Peso:", filtrar);
-    console.log("Filtrar por Peso:", resultado);
-});
-
-const altura = document.getElementById("altura");
-const botonaltura = document.getElementById("filtraraltura");
-botonaltura.addEventListener("click", function () {
-    filtrar = altura.value;
-    let resultado = FiltrarAltura(personas, filtrar);
-    console.log("Filtrar por Altura:", filtrar);
-    console.log("Filtrar por Altura:", resultado);
-});
+    personas.forEach(p => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${p.verNombre()}</td>
+            <td>${p.verApellido()}</td>
+            <td>${p.verDni()}</td>
+            <td>${p.verFechaNacimiento()}</td>
+            <td>${p.verAltura()}</td>
+            <td>${p.verPeso()}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
