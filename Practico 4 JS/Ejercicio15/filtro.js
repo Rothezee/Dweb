@@ -63,18 +63,19 @@ if (datosGuardados) {
 }
 
 addEventListener("DOMContentLoaded", () => {
-    cargarEstudiantes();
+    mostrarEnTabla(estudiantes);/*llamo a la funcion con la lista completa de estudiantes*/
 });
 
 function FiltrarDNI(estudiantes, dni) {
     return estudiantes.filter(p => p.dni === dni);
 }
 
-function cargarEstudiantes() {
+/*Funcion para crear una tabla en base a la lista que se le pase como parametro*/
+function mostrarEnTabla(lista) {
     const tbody = document.querySelector("tbody");
-    tbody.innerHTML = ""; // Limpiar tabla existente
+    tbody.innerHTML = "";
 
-    estudiantes.forEach(p => {
+    lista.forEach(p => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
             <td>${p.verNombre()}</td>
@@ -91,11 +92,12 @@ function cargarEstudiantes() {
     });
 }
 
-
 botondni.addEventListener("click", function () {
     console.log("tu vieja");
     filtrar = fdni.value;
     let resultado = FiltrarDNI(estudiantes, filtrar);
     console.log("Filtrar por DNI:", filtrar);
     console.log("Filtrar por DNI:", resultado);
+
+    mostrarEnTabla(resultado);//llamo a la funcion con la lista filtrada por el dni
 });
