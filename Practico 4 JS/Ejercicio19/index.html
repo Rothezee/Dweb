@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 align="center">Empleos temporarios</h1>
+        <h2 align="center">Formulario de ingreso</h2>  
+    </header>
+
+    <main>
+        <aside>
+            <menu id="menulateral">
+                <ul>
+                    <li><input color="red" type="reset" action=""></li>
+                </ul>
+            </menu>
+        </aside>
+
+        <section>
+            <form name="f1" method="post" action="" align="center">
+                <div class="info">
+                    <label for="nombre"><b>Nombre y Apellido</b></label>
+                    <input type="text" maxlength="60"><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="Turno"><b>Disponibilidad horaria</b></label>
+                    <div class="boxradio">
+                        <input type="radio" name="Turno" value="Mañana">Mañana
+                        <input type="radio" name="Turno" value="Tarde">Tarde
+                        <input type="radio" name="Turno" value="noche">Noche
+                    </div><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="Sueldo"><b>Sueldo pretendido</b></label>
+                    <input type="number"><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="puesto"><b>Puesto donde prefiere ser ubicado</b></label>
+                    <input type="text"><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="EstadoCivil"><b>Estado Civil</b></label>
+                    <div class="boxradio">
+                        <input type="radio" name="estadoCivil" value="soltero">Soltero
+                        <input type="radio" name="estadoCivil" value="casado">Casado
+                    </div><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="hijosMe12"><b>Cantidad de Hijos menores de 12 años</b></label>
+                    <input type="number"><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="hijosMa12"><b>Cantidad de Hijos entre 12 y 21 años</b></label>
+                    <input type="number"><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="hijosMa21"><b>Cantidad de Hijos mayores a 21 años</b></label>
+                    <input type="number"><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="Pasaporte"><b>Posee usted pasaporte?</b></label>
+                    <div class="boxradio">
+                        <input type="radio" name="pasaporte" value="si">Si
+                        <input type="radio" name="pasaporte" value="no">No
+                    </div><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="documento"><b>Documento de identidad</b></label>
+                    <input type="number"><br>
+                </div><br>
+
+                <div class="info">
+                    <label for="CV"><b>Adjunte su Curriculum Vitae aqui</b></label>
+                    <input type="file"><br>
+                </div><br>
+            </form>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>derechos de autor</p>
+    </footer>
+</body>
+</html>

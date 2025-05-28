@@ -1,0 +1,12 @@
+body {
+    margin: 1rem;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 2rem 0;
+    background-color: #5e96ff;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+}
